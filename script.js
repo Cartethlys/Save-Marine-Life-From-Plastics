@@ -268,10 +268,10 @@ updateBackground();
 
 // ===== FEEDBACK SETTINGS (edit these two lines) =====
 // 1. Put your own Gmail address here:
-const FEEDBACK_EMAIL = 'yourname@gmail.com';
+const FEEDBACK_EMAIL = 'lamys.jr.0707@gmail.com';
 // 2. Optional: paste your Formspree link here to receive feedback automatically
 //    (example: 'https://formspree.io/f/abcdwxyz'). Leave '' to use the email app instead.
-const FORM_ENDPOINT = '';
+const FORM_ENDPOINT = 'https://formspree.io/f/moeeblvk';
 // =====================================================
 
 // Feedback form
