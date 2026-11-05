@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Save Marine Life from Plastic</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="bg" aria-hidden="true">
+
+    <!-- Layer 1: sunlit surface (always visible) -->
+    <div class="bg-layer">
+      <svg viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
+        <defs>
+          <linearGradient id="gSurface" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#cdeefa"/>
+            <stop offset="1" stop-color="#4fb8d4"/>
+          </linearGradient>
+        </defs>
+        <rect width="1200" height="800" fill="url(#gSurface)"/>
+        <g fill="#ffffff" opacity="0.25">
+          <polygon points="150,0 270,0 440,800 280,800"/>
+          <polygon points="520,0 610,0 800,800 650,800"/>
+          <polygon points="900,0 1010,0 1140,800 970,800"/>
+        </g>
+        <path d="M0 150 Q 100 120 200 150 T 400 150 T 600 150 T 800 150 T 1000 150 T 1200 150 V 0 H 0 Z" fill="#e8f8fd" opacity="0.7"/>
+        <path d="M0 190 Q 100 165 200 190 T 400 190 T 600 190 T 800 190 T 1000 190 T 1200 190" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.5"/>
+        <!-- floating plastic bottle -->
+        <g class="float">
+          <g transform="translate(880 250) rotate(-25)" fill="#ffffff" opacity="0.55">
+            <rect x="-11" y="-30" width="22" height="58" rx="7"/>
+            <rect x="-6" y="-40" width="12" height="11" rx="2"/>
+          </g>
+        </g>
+        <!-- floating plastic bag -->
+        <g class="float" style="animation-delay:-5s">
+          <g transform="translate(260 330)" fill="#ffffff" opacity="0.5">
+            <path d="M-26 0 L26 0 L32 54 Q0 70 -32 54 Z"/>
+            <path d="M-14 0 Q-14 -22 0 -22 Q14 -22 14 0" fill="none" stroke="#ffffff" stroke-width="5"/>
+          </g>
+        </g>
+      </svg>
+    </div>
+
+    <!-- Layer 2: coral reef -->
+    <div class="bg-layer fade">
+      <svg viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
+        <defs>
+          <linearGradient id="gReef" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#3cc2b0"/>
+            <stop offset="1" stop-color="#1a7fa8"/>
+          </linearGradient>
+        </defs>
+        <rect width="1200" height="800" fill="url(#gReef)"/>
+        <g fill="#ffffff" opacity="0.12">
+          <polygon points="200,0 300,0 520,800 340,800"/>
+          <polygon points="760,0 850,0 1000,800 840,800"/>
+        </g>
+        <!-- seaweed -->
+        <g fill="none" stroke="#1d7a5a" stroke-width="10" stroke-linecap="round" opacity="0.7">
+          <path d="M80 800 Q 50 740 80 690 T 80 580"/>
+          <path d="M130 800 Q 100 750 130 710 T 130 630"/>
+          <path d="M1060 800 Q 1030 740 1060 680 T 1060 560"/>
+          <path d="M1110 800 Q 1080 750 1110 700 T 1110 620"/>
+        </g>
+        <!-- coral -->
+        <g fill="#f08a7e" opacity="0.8">
+          <rect x="300" y="690" width="20" height="110" rx="10"/>
+          <rect x="270" y="720" width="18" height="80" rx="9"/>
+          <rect x="330" y="730" width="18" height="70" rx="9"/>
+          <rect x="300" y="650" width="20" height="60" rx="10" transform="rotate(-20 310 700)"/>
+        </g>
+        <g fill="#e9b44c" opacity="0.75">
+          <circle cx="720" cy="770" r="42"/>
+          <circle cx="770" cy="780" r="30"/>
+          <circle cx="680" cy="785" r="24"/>
+        </g>
+        <g fill="#c96fa8" opacity="0.7">
+          <path d="M880 800 Q 880 700 920 690 Q 960 700 960 800 Z"/>
+          <path d="M940 800 Q 950 730 990 725 Q 1020 740 1020 800 Z"/>
+        </g>
+        <!-- fish -->
+        <g class="fish" style="animation-duration:38s">
+          <g transform="translate(0 300)" fill="#ffffff" opacity="0.6">
+            <ellipse cx="0" cy="0" rx="22" ry="10"/>
+            <polygon points="18,0 36,-10 36,10"/>
+          </g>
+        </g>
+        <g class="fish" style="animation-duration:55s; animation-delay:-20s">
+          <g transform="translate(0 480)" fill="#ffd27a" opacity="0.7">
+            <ellipse cx="0" cy="0" rx="28" ry="13"/>
+            <polygon points="24,0 46,-13 46,13"/>
+          </g>
+        </g>
+        <g class="fish" style="animation-duration:48s; animation-delay:-35s">
+          <g transform="translate(0 200)" fill="#ffffff" opacity="0.5">
+            <ellipse cx="0" cy="0" rx="16" ry="7"/>
+            <polygon points="13,0 26,-7 26,7"/>
+          </g>
+        </g>
+      </svg>
+    </div>
+
+    <!-- Layer 3: deep water with a sea turtle -->
+    <div class="bg-layer fade">
+      <svg viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
+        <defs>
+          <linearGradient id="gDeep" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#1a6a96"/>
+            <stop offset="1" stop-color="#0b2a45"/>
+          </linearGradient>
+        </defs>
+        <rect width="1200" height="800" fill="url(#gDeep)"/>
+        <g class="float" style="animation-duration:20s">
+          <g transform="translate(620 360)" fill="#ffffff" opacity="0.16">
+            <ellipse cx="0" cy="0" rx="80" ry="56"/>
+            <circle cx="96" cy="-4" r="20"/>
+            <ellipse cx="-30" cy="-64" rx="46" ry="14" transform="rotate(-25 -30 -64)"/>
+            <ellipse cx="-30" cy="64" rx="46" ry="14" transform="rotate(25 -30 64)"/>
+            <ellipse cx="50" cy="-52" rx="30" ry="10" transform="rotate(-35 50 -52)"/>
+            <ellipse cx="50" cy="52" rx="30" ry="10" transform="rotate(35 50 52)"/>
+            <ellipse cx="-86" cy="0" rx="16" ry="8"/>
+          </g>
+          <g transform="translate(620 360)" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.18">
+            <path d="M-40 -20 L0 -34 L40 -20 L40 20 L0 34 L-40 20 Z"/>
+            <path d="M0 -34 L0 34 M-40 -20 L40 20 M40 -20 L-40 20"/>
+          </g>
+        </g>
+        <!-- bubbles -->
+        <g fill="none" stroke="#ffffff" stroke-width="2">
+          <circle class="bubble" cx="180" cy="800" r="10" style="animation-delay:0s"/>
+          <circle class="bubble" cx="240" cy="800" r="6" style="animation-delay:-4s"/>
+          <circle class="bubble" cx="900" cy="800" r="12" style="animation-delay:-2s"/>
+          <circle class="bubble" cx="960" cy="800" r="7" style="animation-delay:-7s"/>
+          <circle class="bubble" cx="1040" cy="800" r="9" style="animation-delay:-9s"/>
+        </g>
+      </svg>
+    </div>
+
+    <!-- Layer 4: ocean floor with plastic waste -->
+    <div class="bg-layer fade">
+      <svg viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
+        <defs>
+          <linearGradient id="gFloor" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#0b2a45"/>
+            <stop offset="1" stop-color="#040c16"/>
+          </linearGradient>
+        </defs>
+        <rect width="1200" height="800" fill="url(#gFloor)"/>
+        <ellipse cx="600" cy="840" rx="760" ry="110" fill="#02070d"/>
+        <!-- drifting plastic bags -->
+        <g class="float" style="animation-duration:16s">
+          <g transform="translate(220 260)" fill="#ffffff" opacity="0.2">
+            <path d="M-28 0 L28 0 L34 60 Q0 76 -34 60 Z"/>
+            <path d="M-15 0 Q-15 -24 0 -24 Q15 -24 15 0" fill="none" stroke="#ffffff" stroke-width="5"/>
+          </g>
+        </g>
+        <g class="float" style="animation-duration:19s; animation-delay:-6s">
+          <g transform="translate(930 380)" fill="#ffffff" opacity="0.18">
+            <path d="M-24 0 L24 0 L30 52 Q0 66 -30 52 Z"/>
+            <path d="M-13 0 Q-13 -20 0 -20 Q13 -20 13 0" fill="none" stroke="#ffffff" stroke-width="5"/>
+          </g>
+        </g>
+        <!-- bottles and cups on the floor -->
+        <g fill="#ffffff" opacity="0.2">
+          <g transform="translate(420 735) rotate(75)">
+            <rect x="-11" y="-30" width="22" height="58" rx="7"/>
+            <rect x="-6" y="-40" width="12" height="11" rx="2"/>
+          </g>
+          <g transform="translate(760 745) rotate(-60)">
+            <rect x="-11" y="-30" width="22" height="58" rx="7"/>
+            <rect x="-6" y="-40" width="12" height="11" rx="2"/>
+          </g>
+          <path d="M1010 720 L1060 720 L1052 770 L1018 770 Z"/>
+        </g>
+        <!-- fishing net -->
+        <g fill="none" stroke="#ffffff" stroke-width="2" opacity="0.15">
+          <path d="M80 640 L260 640 L260 760 L80 760 Z"/>
+          <path d="M120 640 L120 760 M160 640 L160 760 M200 640 L200 760 M80 680 L260 680 M80 720 L260 720"/>
+        </g>
+        <!-- bubbles -->
+        <g fill="none" stroke="#ffffff" stroke-width="2" opacity="0.6">
+          <circle class="bubble" cx="520" cy="800" r="8" style="animation-delay:-3s"/>
+          <circle class="bubble" cx="600" cy="800" r="5" style="animation-delay:-8s"/>
+        </g>
+      </svg>
+    </div>
+
+  </div>
+
+
+  <header>
+    <nav>
+      <div class="logo">Save Marine Life</div>
+      <div class="tabs">
+        <button class="tab active" data-page="home">Home</button>
+        <button class="tab" data-page="problem">Problem</button>
+        <button class="tab" data-page="effects">Effects</button>
+        <button class="tab" data-page="solutions">Solutions</button>
+        <button class="tab" data-page="quiz">Quiz</button>
+        <button class="tab" data-page="feedback">Feedback</button>
+        <button class="tab" data-page="sources">Sources</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <div class="page active" id="home">
+      <div class="hero">
+        <h1>Save Marine Life from Plastic</h1>
+        <p>Plastic waste enters the sea every day. This site explains where it comes from, how it harms sea animals, and what can be done about it.</p>
+        <button class="btn" data-goto="problem">Start</button>
+      </div>
+
+      <h3 class="sub">About this website</h3>
+      <p>This website looks at one problem: plastic pollution in the ocean. It follows the problem from start to finish. First, how plastic gets into the sea. Second, what it does to animals and habitats. Third, what people, governments, and communities can do to reduce it.</p>
+      <p>The topic falls under SDG 14: Life Below Water, which is about protecting oceans and the living things in them.</p>
+
+      <h3 class="sub">Why it matters</h3>
+      <div class="cards">
+        <div class="card">
+          <h3>Sea animals are at risk</h3>
+          <p>Turtles, seabirds, fish, and corals are harmed when they eat plastic, get trapped in it, or lose habitat to it.</p>
+          <div class="more"><p>Swallowed plastic can block an animal's gut or leave it feeling full, so it eats less real food. Animals can also be injured when they are tangled in nets, ropes, or rings.</p></div>
+        </div>
+        <div class="card">
+          <h3>It does not go away</h3>
+          <p>Plastic stays in the environment for hundreds of years. It breaks into microplastics rather than disappearing.</p>
+          <div class="more"><p>Sunlight and waves break plastic into smaller and smaller pieces, but most of it does not fully biodegrade. Estimates of how long plastic lasts vary a lot with the type of plastic and the conditions, so different sources give different numbers.</p></div>
+        </div>
+        <div class="card">
+          <h3>It can reach people</h3>
+          <p>Microplastics have been found in seafood and seawater. Scientists are still studying the effects on human health.</p>
+          <div class="more"><p>Microplastics are plastic pieces smaller than 5 mm. Because they enter the food chain, people who eat seafood can take them in. Researchers are still working out what this means for health.</p></div>
+        </div>
+      </div>
+
+      <h3 class="sub">Key facts</h3>
+      <div class="stats">
+        <div class="card">
+          <div class="stat-number">8 million</div>
+          <div class="stat-label">tonnes of plastic estimated to have entered the ocean from land in 2010 (Jambeck et al., 2015)</div>
+          <div class="more"><p>This estimate comes from a study of 192 coastal countries. It gave a range of 4.8 to 12.7 million tonnes, and 8 million is the middle of that range. A later OECD report estimated 1.7 million tonnes flowed into the ocean in 2019, so estimates differ depending on the method and year.</p><div class='chart' data-title='Plastic entering the ocean from land, 2010 (million tonnes)' data-max='14' data-unit='' data-bars='[["Low estimate", 4.8], ["Middle estimate", 8], ["High estimate", 12.7]]'></div><p class="note">Sources: Jambeck et al. (2015); OECD Global Plastics Outlook (2022).</p></div>
+        </div>
+        <div class="card">
+          <div class="stat-number">5 of 7</div>
+          <div class="stat-label">sea turtle species are listed as Vulnerable or Critically Endangered on the IUCN Red List</div>
+          <div class="more"><p>The hawksbill and Kemp's ridley are Critically Endangered. The loggerhead, leatherback, and olive ridley are Vulnerable. The flatback is Data Deficient, and the green turtle was assessed as Least Concern globally in 2025, although some local populations are still at risk. Plastic is one of several threats, along with fishing gear and hunting.</p><div class='chart' data-title='Sea turtle species by IUCN Red List status (global)' data-max='3' data-unit='' data-bars='[["Critically Endangered", 2], ["Vulnerable", 3], ["Data Deficient", 1], ["Least Concern", 1]]'></div><p class="note">Source: IUCN Marine Turtle Specialist Group, Red List assessments.</p></div>
+        </div>
+        <div class="card">
+          <div class="stat-number">Hundreds</div>
+          <div class="stat-label">of years plastic can persist in the environment</div>
+          <div class="more"><p>There is no single answer, because plastic bags, bottles, and fishing line all break down at different speeds. What is clear is that plastic fragments rather than disappears, so the problem builds up over time.</p></div>
+        </div>
+      </div>
+
+      <h3 class="sub">What you will find here</h3>
+      <div class="cards">
+        <button class="card" data-goto="problem">
+          <h3>The Problem</h3>
+          <p>Where ocean plastic comes from and why it lasts so long.</p>
+          <span class="card-link">Read more</span>
+        </button>
+        <button class="card" data-goto="effects">
+          <h3>Effects</h3>
+          <p>How plastic harms turtles, seabirds, corals, and the food chain.</p>
+          <span class="card-link">Read more</span>
+        </button>
+        <button class="card" data-goto="solutions">
+          <h3>Solutions</h3>
+          <p>Actions you can take, and larger changes that reduce plastic at scale.</p>
+          <span class="card-link">Read more</span>
+        </button>
+        <button class="card" data-goto="quiz">
+          <h3>Quiz</h3>
+          <p>Eight questions to test what you have learned.</p>
+          <span class="card-link">Take the quiz</span>
+        </button>
+        <button class="card" data-goto="feedback">
+          <h3>Feedback</h3>
+          <p>Tell us what you think of this website.</p>
+          <span class="card-link">Give feedback</span>
+        </button>
+        <button class="card" data-goto="sources">
+          <h3>Sources</h3>
+          <p>The references behind the information on this site.</p>
+          <span class="card-link">See sources</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="page" id="problem">
+      <h2>The Problem</h2>
+      <p>Plastic is cheap and durable, and it is used once and thrown away. When it is not collected properly, it moves from land into rivers and then into the sea. Hover over a box to see more information.</p>
+      <div class="stats">
+        <div class="card">
+          <div class="stat-number">8 million</div>
+          <div class="stat-label">tonnes of plastic estimated to have entered the ocean from land in 2010 (Jambeck et al., 2015)</div>
+          <div class="more"><p>The study estimated waste from people living within 50 km of the coast in 192 countries, then worked out how much was likely to be mismanaged and reach the sea. The range was 4.8 to 12.7 million tonnes. Other studies use different methods, so their numbers differ.</p><p class="note">Source: Jambeck et al. (2015), Science.</p></div>
+        </div>
+        <div class="card">
+          <div class="stat-number">Hundreds</div>
+          <div class="stat-label">of years plastic can persist in the environment</div>
+          <div class="more"><p>Plastic does not rot like food or paper. Instead it is broken by sunlight and waves into microplastics, which stay in the water and can be eaten by small organisms.</p></div>
+        </div>
+        <div class="card">
+          <div class="stat-number">Rivers</div>
+          <div class="stat-label">carry a large share of land-based trash to the sea</div>
+          <div class="more"><p>Rivers connect towns, farms, and drains to the coast. Plastic that enters a river can travel a long way before it reaches the sea, and some of it gets stuck along the riverbanks and bottom.</p></div>
+        </div>
+      </div>
+
+      <h3 class="sub">Where ocean plastic comes from</h3>
+      <div class="cards">
+        <div class="card">
+          <h3>Litter on land</h3>
+          <p>Bags, bottles, and food packaging dropped on streets and drains get washed away by rain.</p>
+          <div class="more"><p>Street drains and gutters connect to rivers. In heavy rain, litter that was dropped far from the sea can be carried along them to open water.</p></div>
+        </div>
+        <div class="card">
+          <h3>Rivers</h3>
+          <p>Rivers carry trash from towns and farms down to the coast and out to sea.</p>
+          <div class="more"><p>The OECD estimates that far more plastic has built up in rivers than in the ocean. This means plastic will keep reaching the sea for decades, even if less new waste is mismanaged.</p><div class='chart' data-title='Plastic waste built up in water, OECD estimate (million tonnes)' data-max='120' data-unit='' data-bars='[["Rivers", 109], ["Oceans", 30]]'></div><p class="note">Source: OECD Global Plastics Outlook (2022).</p></div>
+        </div>
+        <div class="card">
+          <h3>Fishing gear</h3>
+          <p>Lost or abandoned nets, lines, and traps keep catching sea life for years. These are called ghost nets.</p>
+          <div class="more"><p>Fishing gear can be lost in storms, snagged on rocks, or thrown away. Once it is in the water it can keep trapping fish, turtles, and other animals, and it does not break down quickly.</p></div>
+        </div>
+        <div class="card">
+          <h3>Poor waste collection</h3>
+          <p>Where rubbish is not collected, plastic is more likely to be burned, buried, or dumped near water.</p>
+          <div class="more"><p>Of the 353 million tonnes of plastic waste produced in 2019, about half went to landfill and only 9% was recycled. About 22% was dumped, burned in the open, or leaked into the environment.</p><div class='chart' data-title='What happened to plastic waste worldwide, 2019 (%)' data-max='55' data-unit='%' data-bars='[["Landfilled", 50], ["Mismanaged or leaked", 22], ["Incinerated", 19], ["Recycled", 9]]'></div><p class="note">Source: OECD Global Plastics Outlook (2022).</p></div>
+        </div>
+      </div>
+
+      <h3 class="sub">Why it does not go away</h3>
+      <p>Most plastic does not fully biodegrade. Sunlight and waves break it into smaller pieces called microplastics, which can remain in the water for a long time.</p>
+
+      <div class="btn-row">
+        <button class="btn" data-goto="effects">Next: Effects</button>
+      </div>
+    </div>
+
+    <div class="page" id="effects">
+      <h2>How Plastic Harms Marine Life</h2>
+      <p>Sea animals are harmed in several ways. Hover over a box to see more information.</p>
+      <div class="cards">
+        <div class="card">
+          <h3>Eating plastic</h3>
+          <p>Sea turtles can mistake plastic bags for jellyfish, their natural food, and swallow them. This can block the gut or cause starvation.</p>
+          <div class="more"><p>Leatherback turtles mainly eat jellyfish, so floating bags and balloons can look like food. A turtle with plastic in its gut may not be able to absorb nutrients properly.</p></div>
+        </div>
+        <div class="card">
+          <h3>Entanglement</h3>
+          <p>Fish, seals, and birds can get trapped in nets, ropes, and plastic rings, which can injure them or stop them from feeding and moving.</p>
+          <div class="more"><p>Turtles and seals breathe air, so an animal caught below the surface can drown. Ropes and rings can also cut into the skin as an animal grows.</p></div>
+        </div>
+        <div class="card">
+          <h3>Microplastics</h3>
+          <p>Tiny plastic pieces are eaten by small organisms and move up the food chain to larger fish.</p>
+          <div class="more"><p>Microplastics are pieces smaller than 5 mm. Some come from larger plastic that breaks apart, and some are released directly, for example from synthetic clothes, vehicle tyres, and industrial plastic pellets.</p></div>
+        </div>
+      </div>
+
+      <h3 class="sub">More effects</h3>
+      <div class="cards">
+        <div class="card">
+          <h3>Seabirds</h3>
+          <p>Seabirds swallow bottle caps, lighters, and plastic pieces. These can fill their stomachs, so they eat less real food.</p>
+          <div class="more"><p>Seabirds often pick plastic off the water surface because it looks like prey. Chicks can also be fed plastic by their parents.</p></div>
+        </div>
+        <div class="card">
+          <h3>Coral reefs</h3>
+          <p>Plastic can scrape, smother, or trap corals. Reefs are homes for many fish, so damage here affects the whole ecosystem.</p>
+          <div class="more"><p>When plastic lies on a coral, it can block light and let disease enter wounds. Because many species depend on reefs for food and shelter, damage to the coral affects the animals living there.</p></div>
+        </div>
+        <div class="card">
+          <h3>Human health</h3>
+          <p>Microplastics have been found in seafood and seawater. Scientists are still studying what this means for people.</p>
+          <div class="more"><p>Fishing and tourism also depend on a clean sea, so plastic pollution affects people's food and income, not only their health.</p></div>
+        </div>
+      </div>
+
+      <h3 class="sub">Sea turtles</h3>
+      <div class="cards">
+        <div class="card">
+          <h3>Sea turtle conservation status</h3>
+          <p>Five of the seven sea turtle species are listed as Vulnerable or Critically Endangered on the IUCN Red List.</p>
+          <div class="more"><p>The hawksbill and Kemp's ridley are Critically Endangered. The loggerhead, leatherback, and olive ridley are Vulnerable. The flatback is Data Deficient, meaning there is not enough data to judge. The green turtle was reassessed as Least Concern globally in 2025, but some local populations are still threatened.</p><div class='chart' data-title='Sea turtle species by IUCN Red List status (global)' data-max='3' data-unit='' data-bars='[["Critically Endangered", 2], ["Vulnerable", 3], ["Data Deficient", 1], ["Least Concern", 1]]'></div><p class="note">Source: IUCN Marine Turtle Specialist Group, Red List assessments.</p></div>
+        </div>
+      </div>
+
+      <div class="btn-row">
+        <button class="btn" data-goto="solutions">Next: Solutions</button>
+      </div>
+    </div>
+
+    <div class="page" id="solutions">
+      <h2>What Can Be Done</h2>
+      <p>Tick the actions you can take in your own daily life. Hover over a box to see more information.</p>
+      <ul class="pledge-list" id="pledge-list">
+        <li><label><input type="checkbox"><span>Bring a reusable bag and water bottle</span></label><div class="more"><p>Carrying your own bag and bottle means fewer single-use items that can end up as litter.</p></div></li>
+        <li><label><input type="checkbox"><span>Refuse single-use plastic straws and cutlery</span></label><div class="more"><p>Small items like straws and cutlery are easy to lose and hard to recycle, so refusing them at the start is the simplest fix.</p></div></li>
+        <li><label><input type="checkbox"><span>Sort and recycle plastic at home and at school</span></label><div class="more"><p>Only 9% of plastic waste worldwide was recycled in 2019, so clean, sorted plastic helps recycling work better.</p></div></li>
+        <li><label><input type="checkbox"><span>Join or organise a beach or river clean-up</span></label><div class="more"><p>Clean-ups remove plastic before it breaks into microplastics, and counting what you find gives you local data to use.</p></div></li>
+        <li><label><input type="checkbox"><span>Support local rules that reduce plastic use</span></label><div class="more"><p>Rules such as bag charges or limits on single-use items change what shops and businesses give out, not only what individuals choose.</p></div></li>
+        <li><label><input type="checkbox"><span>Tell friends and family about the problem</span></label><div class="more"><p>People often do not see where their rubbish ends up. Sharing one fact or one local example can change habits around you.</p></div></li>
+      </ul>
+      <p id="pledge-count">Actions chosen: 0 of 6</p>
+
+      <h3 class="sub">Larger solutions</h3>
+      <p>Each box shows evidence on how well the method works. The numbers measure different things, and most come from projections, trials, or single studies, so read the text in each box rather than comparing bars between boxes.</p>
+      <div class="cards">
+        <div class="card">
+          <h3>Reduce at the source</h3>
+          <p>Cut unnecessary single-use plastic and design products that are easier to reuse or recycle.</p>
+          <div class="more"><p>UNEP projected that reuse systems, such as refillable bottles, bulk dispensers, and deposit-return schemes, could cut 30% of plastic pollution by 2040. Replacing items like wrappers, sachets, and takeaway packaging with other materials could cut a further 17%. UNEP says all its measures together, starting with removing unnecessary plastic, could cut pollution by 80%. These are projections, not measured results.</p><div class='chart' data-title='Projected cut in plastic pollution by 2040, UNEP (%)' data-max='90' data-unit='%' data-bars='[["Reuse systems", 30], ["Alternative materials", 17], ["All measures combined", 80]]'></div><p class="note">Source: UNEP, Turning off the Tap (2023).</p></div>
+        </div>
+        <div class="card">
+          <h3>Better waste management</h3>
+          <p>Reliable collection, sorting, and recycling keep plastic out of drains and rivers.</p>
+          <div class="more"><p>The OECD found that in non-OECD countries a much larger share of plastic waste is mismanaged or uncollected, and it calls for major investment in basic waste management in low and middle-income countries. UNEP projected that making recycling more stable and profitable, for example with design rules that make products easier to recycle, could cut a further 20% of plastic pollution by 2040.</p><div class='chart' data-title='Plastic waste mismanaged or uncollected (%)' data-max='45' data-unit='%' data-bars='[["OECD countries", 6], ["Non-OECD countries", 39]]'></div><div class='chart' data-title='Projected cut in plastic pollution by 2040, UNEP (%)' data-max='90' data-unit='%' data-bars='[["Better recycling", 20], ["All measures combined", 80]]'></div><p class="note">Sources: OECD Global Plastics Outlook (2022); UNEP, Turning off the Tap (2023).</p></div>
+        </div>
+        <div class="card">
+          <h3>River trash traps</h3>
+          <p>Barriers placed across rivers can catch floating rubbish before it reaches the sea.</p>
+          <div class="more"><p>Results depend on the design and the river. The developers of a bubble barrier reported that it caught 80% of test material in a trial in the Netherlands. First results from an Interceptor in Jakarta showed it could collect up to 60% of solid waste passing by. A study of one passive litter trap found it caught about 11% of the litter in the waterbody it targeted. Traps work better in well-chosen locations, and they only catch trash that is already in the river.</p><div class='chart' data-title='Share of floating litter captured in reported tests (%)' data-max='90' data-unit='%' data-bars='[["Bubble barrier (test material)", 80], ["Interceptor, Jakarta (up to)", 60], ["Passive trap (one study)", 11]]'></div><p class="note">Sources: Great Bubble Barrier trial results; Dutch Water Sector (Interceptor results); CLEAR RIVERS litter trap study.</p></div>
+        </div>
+        <div class="card">
+          <h3>Fishing gear recovery</h3>
+          <p>Programmes that collect and recycle old nets remove ghost gear from the ocean.</p>
+          <div class="more"><p>One 2023 cleanup in Norway recovered gillnets and king crab pots that had trapped 307 animals weighing 382 kg in total. Per kilogram of gear, the gillnets had caught 27.3% more animals and 50.3% more biomass than the crab pots. A 2007 cost-benefit study of European waters suggested that retrieval programmes may give less value for money than other measures, such as stopping gear from being lost in the first place.</p><div class='chart' data-title='Extra catch in recovered gillnets vs crab pots, per kg of gear (%)' data-max='60' data-unit='%' data-bars='[["More animals", 27.3], ["More biomass", 50.3]]'></div><p class="note">Sources: Vodopia et al. (2024), Marine Pollution Bulletin; Brown and Macfadyen (2007), Marine Policy.</p></div>
+        </div>
+        <div class="card">
+          <h3>Policy</h3>
+          <p>Plastic bag bans, bottle deposit schemes, and producer responsibility rules can reduce plastic on a large scale.</p>
+          <div class="more"><p>England introduced a 5p charge on single-use carrier bags in October 2015. Government figures show the average person bought about 140 bags a year from the main supermarkets in 2014 and about 2 a year in 2022 to 2023. This covers carrier bags only, which the OECD notes are a small share of all plastic waste. It shows that a policy can change behaviour quickly, but it does not solve plastic pollution by itself.</p><div class='chart' data-title='Single-use carrier bags bought per person per year, main supermarkets in England' data-max='150' data-unit='' data-bars='[["2014 (before charge)", 140], ["2022 to 2023", 2]]'></div><p class="note">Sources: UK Government (2023); OECD Global Plastics Outlook (2022).</p></div>
+        </div>
+      </div>
+
+      <h3 class="sub">Penang</h3>
+      <p>Find out which river, drain, or beach near your school or home is affected by plastic. Look for local clean-ups, recycling points, or rules. You can search for news about Penang's single-use plastic rules and campaigns to find a local example. A local example will make your website stronger.</p>
+
+      <div class="btn-row">
+        <button class="btn" data-goto="quiz">Next: Quiz</button>
+      </div>
+    </div>
+
+    <div class="page" id="quiz">
+      <h2>Quiz</h2>
+      <p>Answer eight questions to check what you have learned.</p>
+      <div class="quiz-box">
+        <h3 id="question-text"></h3>
+        <div class="options" id="options"></div>
+        <div id="feedback"></div>
+        <button class="btn hidden" id="next-btn" style="margin-top:12px;">Next</button>
+        <div id="quiz-result"></div>
+      </div>
+    </div>
+
+    <div class="page" id="feedback">
+      <h2>Feedback</h2>
+      <p>Tell us what you think about this website. Your comments help us improve it.</p>
+
+      <div class="feedback-form">
+        <label>Name (optional)
+          <input type="text" id="fb-name" placeholder="Your name">
+        </label>
+        <label>How would you rate this website?
+          <select id="fb-rating">
+            <option value="">Choose a rating</option>
+            <option value="5">5 - Excellent</option>
+            <option value="4">4 - Good</option>
+            <option value="3">3 - Okay</option>
+            <option value="2">2 - Needs work</option>
+            <option value="1">1 - Poor</option>
+          </select>
+        </label>
+        <label>What did you like, or what should be improved?
+          <textarea id="fb-comment" placeholder="Write your feedback here"></textarea>
+        </label>
+        <div id="feedback-error"></div>
+        <div class="btn-row" style="margin-top:0;">
+          <button class="btn" id="fb-submit">Submit feedback</button>
+        </div>
+      </div>
+
+      <div id="feedback-thanks" class="hidden">
+        <h3>Thank you for your feedback</h3>
+        <p id="thanks-msg"></p>
+        <textarea id="feedback-text" readonly></textarea>
+        <div class="btn-row" style="margin-top:12px;">
+          <button class="btn" id="fb-again">Write more feedback</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="page" id="sources">
+      <h2>Sources</h2>
+      <p>Check each source before you use it in your own work.</p>
+      <ol class="sources">
+        <li>Jambeck, J. R., et al. (2015). Plastic waste inputs from land into the ocean. <em>Science</em>, 347(6223), 768-771.</li>
+        <li>UN Environment Programme. Marine plastic litter and microplastics. unep.org</li>
+        <li>IUCN Marine Turtle Specialist Group. Red List assessments. iucn-mtsg.org/statuses</li>
+        <li>OECD (2022). Global Plastics Outlook: Economic Drivers, Environmental Impacts and Policy Options. oecd.org</li>
+        <li>UN Environment Programme (2023). Turning off the Tap: How the World Can End Plastic Pollution and Create a Circular Economy. unep.org</li>
+        <li>UK Government (2023). Plastic bag use falls by more than 98% after charge introduction. gov.uk</li>
+        <li>Vodopia, D., Verones, F., Askham, C., and Larsen, R. B. L. (2024). Retrieval operations of derelict fishing gears give insight on the impact on marine life. <em>Marine Pollution Bulletin</em>.</li>
+        <li>Brown, J., and Macfadyen, G. (2007). Ghost fishing in European waters: Impacts and management responses. <em>Marine Policy</em>, 31(4), 488-504.</li>
+        <li>The Great Bubble Barrier. Test results in the IJssel (Amsterdam Smart City). Dutch Water Sector. World Bank study on plastic waste in Indonesian rivers (reports Interceptor results). CLEAR RIVERS. Improving litter traps (HBO Kennisbank).</li>
+        <li>Ocean Conservancy. International Coastal Cleanup reports. oceanconservancy.org</li>
+        <li>Add your own sources here, such as news articles, local reports, interviews, or photos you took.</li>
+      </ol>
+    </div>
+
+  </main>
+
+  <footer>
+    Save Marine Life from Plastic. School project on SDG 14: Life Below Water.
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
